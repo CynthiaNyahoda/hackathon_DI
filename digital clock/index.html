@@ -37,6 +37,7 @@
         <div id="ampm">AM</div>
        </div>
 
+
     </div>
 
        <div class="day_wrapper">
@@ -51,7 +52,11 @@
        </div>
        <span class="text_color" id="showDate"></span>
        
-    
+    <div id="alarm">
+        <input onchange="SetAlarmTime(this.value)" name="alarmTime" type="datetime-local">
+        <button onclick="setAlarm()" class="button set-alarm">set alarm</button>
+        <button onclick="clearAlarm()" class="button clear-alarm">clear alarm</button>
+    </div>
     
     <script src="./main.js"></script>
 </body>

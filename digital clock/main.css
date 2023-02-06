@@ -130,3 +130,27 @@ opacity: .3;
     font-size: 2rem;
 }
 
+.controls{
+    margin-top: 16px;
+}
+
+
+div#alarm{
+    bottom: 100px;
+}
+.button {
+    font-weight: bold;
+    border-radius: 5px;
+    color: white;
+    padding: 4px 8px;
+    top: 200px;
+    cursor: pointer;
+}
+
+.set-alarm {
+    background-color: turquoise;
+}
+
+.clear-alarm {
+    background-color: red;
+}

@@ -2,6 +2,12 @@ let hours = document.getElementById('hours');
 let minutes = document.getElementById('minutes');
 let seconds = document.getElementById('seconds');
 let ampm = document.getElementById('ampm');
+const display = document.getElementById("alarm")
+
+const audio = new Audio ()
+audio.loop = true;
+let alarmTime = null;
+let alarmTimeout = null;
 
 
 setInterval(() =>{
@@ -66,7 +72,24 @@ showDay[day].style.opacity = "1";
     min_dot.style.transform = `rotate(${min * 6}deg)`;
     sec_dot.style.transform = `rotate(${sec * 6}deg)`;
 
+function setAlarmTime(value) {
+    alarmTime = value;
+    console.log(alarmTime)
+}  setAlarmTime(value);
 
+
+function setAlarm() {
+    if(alarmTime){
+        const current = new Date();
+        const timeToAlarm = new Date(alarmTime);
+
+        if(timeToAlarm > current) {
+            const timeout = timeToAlarm.getTime() - current.getTime();
+            alarmTimeout = setTimeout(()=> audio.play(), timeout);
+            alert('Alarm set')
+        }
+    } 
+}  setAlarm();
 
     
 })
