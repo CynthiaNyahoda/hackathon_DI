@@ -6,8 +6,10 @@
     <title>Hackathon_DI</title>
 </head>
 <body>
+    
     <div id="time">
         <div class="circle" style="--clr: rgb(245, 7, 82);">
+            <div class="dots hr_dot"></div>
             <svg>
                 <circle cx="70" cy="70" r="70"></circle>
                 <circle cx="70" cy="70" r="70" id="hh"></circle>
@@ -15,6 +17,7 @@
             <div id="hours">00</div>
         </div>
        <div class="circle" style="--clr:rgb(255, 255, 0);">
+        <div class="dots min_dot"></div>
         <svg>
             <circle cx="70" cy="70" r="70"></circle>
             <circle cx="70" cy="70" r="70" id="mm"></circle>
@@ -22,6 +25,7 @@
         <div id="minutes">00</div>
        </div>
        <div class="circle" style="--clr:rgb(0, 255, 0);">
+        <div class="dots sec_dot"></div>
         <svg>
             <circle cx="70" cy="70" r="70"></circle>
             <circle cx="70" cy="70" r="70" id="ss"></circle>
@@ -32,7 +36,23 @@
        <div class="ap">
         <div id="ampm">AM</div>
        </div>
-       </div> 
+
+    </div>
+
+       <div class="day_wrapper">
+        <span class="text_color" >SUN</span>
+        <span class="text_color" >MON</span>
+        <span class="text_color" >TUE</span>
+        <span class="text_color" >WED</span>
+        <span class="text_color" >THU</span>
+        <span class="text_color" >FRI</span>
+        <span class="text_color" >SAT</span>
+            
+       </div>
+       <span class="text_color" id="showDate"></span>
+       
+    
+    
     <script src="./main.js"></script>
 </body>
 </html>

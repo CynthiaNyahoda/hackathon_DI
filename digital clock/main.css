@@ -15,7 +15,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: rgb(23, 39, 39);
+    background-color: rgb(9, 14, 14);
 }
 
 div {
@@ -24,12 +24,24 @@ div {
     font-weight: 500;
     font-size: 1.5em;
     position: absolute;
+   
 } 
 
 div#time {
     display: flex;
-    gap: 40px;
+    gap: 60px;
     color: #fff;
+    
+}
+
+div span{
+    position: absolute;
+    transform: translateX(-50%) translateY(-10px);
+    font-size: 0.20em;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
 }
 
 .circle {
@@ -66,5 +78,55 @@ div#time {
 .ap {
     position: relative;
     font: 1em;
-    transform: translateX(-20px);
+    transform: translateX(10px);
+    top: -60px;
 }
+
+.dots {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    z-index: 10;
+}
+
+.dots::before {
+content:'';
+position: absolute;
+top: -3px;
+width: 15px;
+height: 15px;
+background: var(--clr);
+border-radius: 50%;
+box-shadow: 0 0 20px var(--clr),
+0 0 60px var(--clr)
+
+}
+
+.text_color{
+    background-color:rgb(113, 43, 179);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.day_wrapper {
+    display:inline-block;
+    position: relative;
+    bottom: 250px;
+    justify-content: space-between;
+    /* transform: translateX(30px); */
+}
+
+.day_wrapper span{
+font-size: 2rem;
+font-weight: 600;
+opacity: .3;
+}
+
+#showDate{
+    position: relative;
+    bottom: 200px;
+    font-size: 2rem;
+}
+
